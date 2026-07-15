@@ -4,24 +4,30 @@
    - Noto Sans JP  -> body (covers Latin + Japanese) */
 
 :root {
-  /* Core palette — JANFA-inspired, tuned warmer for an East-African / savanna feel */
-  --gold: #c5a059;
-  --gold-dark: #a8843d;
-  --gold-soft: #e6d3a8;
-  --dark: #1e2b26; /* deep savanna-night green-charcoal (used for dark sections + footer) */
-  --dark-2: #16201c;
-  --sand: #f4edd8; /* page background */
-  --sand-deep: #ece0c9; /* slightly deeper panels */
+  /* Core palette — "Eastern European heraldic": midnight navy + garnet red +
+     antique gold on cool ivory. Folk-textile red, imperial blue, orthodox gold.
+     NOTE: the token names are historical (from the JAYP savanna theme). The
+     roles are what matter:
+       --gold*   = PRIMARY brand (garnet red) — CTAs, links, eyebrows on light.
+       --gold-soft = light ANTIQUE-GOLD highlight — accents on DARK backgrounds.
+       --accent* = SECONDARY (imperial blue).  --green = folk pine (tertiary). */
+  --gold: #a5323a; /* garnet red — primary brand / CTA fill (white text on it) */
+  --gold-dark: #7d232a; /* deep garnet — link + eyebrow text on light bg */
+  --gold-soft: #e0c680; /* antique gold — highlight text on dark sections/heroes */
+  --dark: #1a2340; /* midnight navy (dark sections + footer) */
+  --dark-2: #121a33;
+  --sand: #f1ece1; /* cool ivory page background */
+  --sand-deep: #e6dfcf; /* slightly deeper panels */
   --paper: #ffffff; /* white sections */
-  --accent: #c25e2e; /* terracotta */
-  --accent-dark: #a44a22;
-  --green: #4e6b43;
+  --accent: #2f5a9e; /* imperial / cobalt blue (secondary) */
+  --accent-dark: #244a82;
+  --green: #3d6b4f; /* folk pine (tertiary) */
 
-  --text: #2a241f;
-  --text-soft: #5c5349;
-  --text-on-dark: #f4edd8;
-  --text-on-dark-soft: #c9c2b4;
-  --border: #e2d6bc;
+  --text: #232026;
+  --text-soft: #565059;
+  --text-on-dark: #eef0f4;
+  --text-on-dark-soft: #b9c0cf;
+  --border: #e4ddcc;
   --border-dark: rgba(255, 255, 255, 0.12);
 
   /* Type scale */
@@ -189,7 +195,7 @@ button {
   margin: 0;
 }
 .section-dark .label .eyebrow {
-  color: var(--gold);
+  color: var(--gold-soft);
 }
 
 /* ---------- Buttons ---------- */
@@ -213,7 +219,7 @@ button {
   background: var(--gold);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -10px rgba(168, 132, 61, 0.7);
+  box-shadow: 0 10px 24px -10px rgba(125, 35, 42, 0.55);
 }
 .btn-solid {
   background: var(--gold);
